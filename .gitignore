@@ -12,8 +12,13 @@ config.codekit3
 /min
 
 #
-#CodeKit : CodeKit Patch
+# CodeKit : CodeKit Patch
 #
 
 */codekit-config.json
 .codekit-cache
+
+#
+# node : node_modules
+#
+node_modules/
