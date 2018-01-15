@@ -1,0 +1,22 @@
+{
+  "name": "messenger",
+  "version": "1.0.0",
+  "description": "messenger app landing page",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "landing",
+    "page",
+    "design"
+  ],
+  "author": "isaac",
+  "license": "ISC",
+  "dependencies": {
+    "font-awesome": "^4.7.0"
+  }
+}
