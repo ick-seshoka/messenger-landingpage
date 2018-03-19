@@ -1,5 +1,6 @@
  @import "./utilities/_variables";
- @import "./utilities/menu-trigger";
+ @import "./utilities/_menu-trigger";
+ @import "./utilities/_common";
 
  body,
  html {
@@ -24,66 +25,7 @@
      }
 
      button#menu-trigger {
-         position        : relative;
-         width           : 30px;
-         height          : 30px;
-         padding         : 0;
-         cursor          : pointer;
-         border          : none;
-         text-align      : center;
-         background-color: transparent;
-         z-index         : 2;
-         &:active,
-         &:focus {
-             outline: none;
-         }
-         span {
-             position  : relative;
-             display   : block;
-             width     : 20px;
-             transition: all 0.5s ease-in-out;
-             &:before,
-             &:after {
-                 position  : absolute;
-                 display   : inherit;
-                 content   : '';
-                 transition: all 0.5s ease-in-out;
-             }
-             &,
-             &:before,
-             &:after {
-                 height          : 3px;
-                 background-color: $white;
-                 border-radius   : 2px;
-             }
-             &:before {
-                 width: 30px;
-                 top  : -8px;
-             }
-             &:after {
-                 width : 15px;
-                 bottom: -8px;
-             }
-         }
-         &[data-state='open'] {
-             span {
-                 & {
-                     width           : 0;
-                     background-color: transparent;
-                 }
-                 &:before {
-                     transform: translateY(8px) rotate(45deg);
-                 }
-                 &:after {
-                     width    : 30px;
-                     transform: translateY(-8px) rotate(-45deg);
-                 }
-             }
-         }
-
-         @media screen and (min-width: 768px) {
-             display: none;
-         }
+         @extend %menu-trigger;
      }
 
      nav {
@@ -119,7 +61,6 @@
                 animation-name    : zoomIn;
                 animation-duration: 0.2s;
             }
-
             @media screen and (min-width: 768px) {
                 display       : inline-block;
                 margin-right  : 3.75em;
@@ -160,7 +101,6 @@
         .desktop-nav-link {
             display: none;
         }
-
         @media screen and (min-width: 768px) {
             position   : relative;
             top        : unset;
@@ -193,14 +133,12 @@
              color         : $gray;
              line-height   : 1.7;
              letter-spacing: 1.5px;
-
              @media screen and (min-width: 768px) {
                  font : {
                      size: $font-sm-large;
                  }
                  text-align: left;
              }
-
              @media screen and (min-width: 992px) {
                  font : {
                      size: $font-lg-large;
@@ -220,7 +158,6 @@
              color     : rgba(236, 239, 241, 0.7);;
              margin-top: 3em;
              text-align: center;
-
              @media screen and (min-width: 768px) {
                  text-align: left;
              }
@@ -233,7 +170,6 @@
              img {
                  width: 9em;
              }
-
              @media screen and (min-width: 768px){
                  text-align: left;
                  img {
@@ -241,35 +177,32 @@
                  }
              }
          }
-
          @media screen and (min-width: 768px) {
             margin-top: 5.5em;
          }
-
          @media screen and (min-width: 992px) {
              margin-top: 9em;
          }
      }
 
 
-     div#splsh-screen-figure {
+     figure#splsh-screen-figure {
+         margin    : unset;
          margin-top: 7.7em;
          text-align: center;
          img {
             max-width: 100%;
-            height: auto;
+            height   : auto;
          }
-
          @media screen and (min-width: 768px) {
             margin-top: 8.5em;
             img {
-                max-width: unset;
-                height: unset;
-                width: 28.8em;
+                max-width  : unset;
+                height     : unset;
+                width      : 28.8em;
                 margin-left: -6.3em;
             }
          }
-
          @media screen and (min-width: 992px) {
              margin-top: 13.7em;
              img {
@@ -277,15 +210,53 @@
              }
          }
      }
-
      @media screen and (min-width: 768px) {
          height: 37.4625em;
-         background : {
+         background: {
              position: 0 0, 0 0;
          }
      }
-
      @media screen and (min-width: 992px) {
          height: 100%;
+     }
+ }
+
+ main {
+     section#about-intro {
+         padding-top   : 15em;
+         padding-bottom: 8.5625em;
+         background: {
+             image   : url('../img/emoji_background_detail.png');
+             position: 0 0;
+             repeat  : repeat;
+         }
+         h2 {
+             @extend %section-heading-intro;
+         }
+     }
+
+     section#features-intro {
+         @extend %feature-content;
+         h2 {
+            @extend %section-heading-intro;
+            @media screen and (min-width: 768px) {
+                text-align: left;
+                line-height: 1.8;
+            }
+         }
+     }
+
+     section.feature {
+         @extend %feature-content;
+     }
+
+     section#feature-heading {
+         @extend %feature-content;
+         h2 {
+             @extend %section-heading-intro;
+             @media screen and (min-width: 768px) {
+                 line-height: 1.8;
+             }
+         }
      }
  }

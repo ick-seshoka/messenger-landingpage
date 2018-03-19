@@ -1,0 +1,157 @@
+//
+// Common element styles
+//
+
+// section heading intro
+
+%section-heading-intro {
+    font: {
+        family: $roboto;
+        size       : $font-xm-medium;
+        weight     : $weight-normal;
+    }
+    text-align    : center;
+    color         : $blue-gray;
+    letter-spacing: 1px;
+    line-height   : 1.6;
+    span {
+        font: {
+            family: $alef;
+            weight: $weight-bold;
+        }
+    }
+    br.br-md {
+        display: none;
+    }
+    @media screen and (min-width: 768px) {
+        font: {
+            size: $font-sm-medium;
+        }
+        br.br-md {
+            display: block;
+        }
+    }
+    @media screen and (min-width: 992px) {
+        font: {
+            size: $font-md-medium;
+        }
+    }
+}
+
+// fetaures section container
+
+%feature-content {
+    position        : relative;
+    padding-top     : 6.6625em;
+    padding-bottom  : 4.5625em;
+    background-color: $snow-drift;
+
+    div.feature-content-wrap {
+        margin-bottom: 6.5em;
+        background: {
+            position: 0 0;
+            repeat: no-repeat;
+        }
+        h2.feature-heading {
+            margin-bottom: 1.375em;
+            font : {
+                family: $roboto;
+                size  : $font-xm-medium;
+                weight: $weight-normal;
+            }
+            color         : $blue-gray;
+            text-transform: capitalize;
+            text-align    : center;
+            @media screen and (min-width: 768px) {
+                font : {
+                    size: $font-sm-medium;
+                }
+                text-align: left;
+            }
+            @media screen and (min-width: 992px) {
+                font : {
+                    size: $font-xm-large;
+                }
+            }
+        }
+        p {
+            font : {
+                family: $roboto;
+                size  : $font-xm-small;
+                weight: $weight-light;
+            }
+            line-height   : 2;
+            text-align    : center;
+            letter-spacing:  1px;
+            color         : $tower-gray;
+            @media screen and (min-width: 768px) {
+                font : {
+                    size: $font-sm-small;
+                }
+                text-align: left;
+            }
+        }
+        a {
+            position       : relative;
+            display        : block;
+            margin-top     : 4.0625em;
+            text-align     : center;
+            text-transform : uppercase;
+            text-decoration: none;
+            color          : $malibu;
+            letter-spacing : 1px;
+            font: {
+                family: $roboto;
+                size  : 0.6875em;
+                weight: normal;
+            }
+            img {
+                margin-right: 1em;
+            }
+            @media screen and (min-width: 768px) {
+                text-align: left;
+            }
+        }
+        @media screen and (min-width: 768px) {
+            position : absolute;
+            top      : 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    div#feature-1 {
+        background: {
+            image: url('../../img/lock-icon.svg');
+        }
+    }
+
+    div#feature-2 {
+        background: {
+            image: url('../../img/group_icon.svg');
+        }
+    }
+
+    figure {
+        text-align: center;
+        margin    : unset;
+        img {
+            width: 12.5em;
+        }
+        @media screen and (min-width: 768px) {
+            text-align: left;
+            img {
+                width: 15.625em;
+            }
+        }
+        @media screen and (min-width: 768px) {
+            img {
+                width: 15.625em;
+            }
+        }
+        @media screen and (min-width: 992px) {
+            img {
+                width: 18.5625em;
+            }
+        }
+    }
+}

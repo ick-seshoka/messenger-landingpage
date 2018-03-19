@@ -2,8 +2,12 @@
 // Colors
 //
 
-$white : rgb(255, 255, 255);
-$gray  : rgba(236, 239, 241, 0.9) ;
+$white     : rgb(255, 255, 255);
+$gray      : rgba(236, 239, 241, 0.9) ;
+$blue-gray : rgb(96, 125, 139);
+$snow-drift: rgb(252, 253, 252);
+$tower-gray: rgb(176, 190, 197);
+$malibu    : rgb(129, 212, 250);
 
 //
 // Fonts
@@ -23,6 +27,11 @@ $weight-medium : 500;
 $weight-bold   : 700;
 
 // Font sizes
-$font-xm-large: 1.875em;
-$font-sm-large: 1.863em;
-$font-lg-large: 2.563em;
+$font-xm-large : 1.875em;
+$font-sm-large : 1.863em;
+$font-lg-large : 2.563em;
+$font-xm-medium: 1.5em;
+$font-sm-medium: 1.75em;
+$font-md-medium: 1.9375em;
+$font-xm-small : 1.125em;
+$font-sm-small : 1.275em;
