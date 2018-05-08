@@ -4,8 +4,9 @@
 
  body,
  html {
-     width  : 100%;
-     height : 100%;
+     width           : 100%;
+     height          : 100%;
+     background-color: $snow-drift;
  }
 
  header {
@@ -116,7 +117,15 @@
             }
             .desktop-nav-link {
                 display         : inline-block;
+                width           : 1.675em;
+                height          : 1.675em;
                 margin-right    : 1.5em;
+                background-color: rgba(236, 239, 241, 0.15);
+                text-align      : center;
+                border-radius   : 50%;
+                svg {
+                    vertical-align: middle;
+                }
             }
         }
      }
@@ -246,17 +255,173 @@
          }
      }
 
-     section.feature {
-         @extend %feature-content;
+    section.feature {
+        @extend %feature-content;
      }
 
      section#feature-heading {
-         @extend %feature-content;
+        @extend %feature-content;
+        h2 {
+            @extend %section-heading-intro;
+            @media screen and (min-width: 768px) {
+                line-height: 1.8;
+            }
+         }
+     }
+
+     section#app-reviews {
+         position        : relative;
+         padding-top     : 6.6625em;
+         padding-bottom  : 4.5625em;
+         margin-top      : 2.6625em;
+         background: {
+             image: linear-gradient(-45deg, #185A9D 0%, #43CEA2 100%);
+         }
+
          h2 {
              @extend %section-heading-intro;
-             @media screen and (min-width: 768px) {
-                 line-height: 1.8;
+             color         : $gray;
+             padding-bottom: 4.5625em;
+         }
+
+         div#user-reviews {
+             div.user-review {
+                 div.profile-picture {
+                     position      : relative;
+                     display       : inline-block;
+                     vertical-align: top;
+                     width         : 6.1375em;
+                     height        : 6.1375em;
+                     margin-right  : 2.125em;
+                     border-radius : 50%;
+                     z-index       : 1;
+                     background: {
+                         image   : url('../img/profile_pic_1.jpg');
+                         position: 0 0;
+                         size    : cover;
+                     }
+                     &:before, &:after {
+                         position        : absolute;
+                         display         : block;
+                         content         : "";
+                         width           : 100%;
+                         height          : 100%;
+                         top             : 0;
+                         left            : 0;
+                         opacity         : 0.25;
+                         border-radius   : 50%;
+                         background      : rgba(76,175,80,0.50);
+                     }
+                     &:before {
+                        background-image: linear-gradient(-135deg, rgba(108,246,218,0.75) 0%, #176DA0 100%);
+                        transform       : scale(1.3);
+                        z-index         : -1;
+                     }
+                     &:after {
+                        background-image: linear-gradient(-135deg, rgba(108,246,218,0.75) 0%, #176DA0 100%);
+                        transform       : scale(1.1);
+                        z-index         : 0;
+                     }
+                 }
+                 div.user-info-wrap {
+                     display       : inline-block;
+                     position      : absolute;
+                     top           : 50%;
+                     transform     : translateY(-50%);
+                     vertical-align: top;
+                     text-align    : center;
+                     h3 {
+                         margin-bottom: 0.6875em;
+                         font: {
+                             family: $roboto;
+                             size  : $font-xm-medium;
+                             weight: $weight-bold;
+                         }
+                         color: $gray;
+                     }
+                     a {
+                         position        : relative;
+                         display         : inline-block;
+                         width           : 1.675em;
+                         height          : 1.675em;
+                         color           : rgba(255, 255, 255, 0.67);
+                         background-color: rgba(236, 239, 241, 0.15);
+                         text-align      : center;
+                         border-radius   : 50%;
+                         &:nth-child(-n+3) {
+                            margin-right: 0.6em;
+                         }
+                         svg {
+                            vertical-align: middle;
+                         }
+                     }
+                 }
+                div.review-wrap {
+                    margin-top: 2.25em;
+                    p {
+                        position: relative;
+                        padding : 1.5625em;
+                        font: {
+                            family: $roboto;
+                            size  : $font-xm-small;
+                            weight: $weight-light;
+                        }
+                        background-color: rgba(236, 239, 241, 0.15);
+                        color           : $gray;
+                    }
+                }
              }
+         }
+
+         div#nav-wrapper {
+             text-align: right;
+             margin-top: 2.625em;
+             a {
+                 font-size: 1.725em;
+                 &:nth-child(1) {
+                    margin-right: 2.3125em;
+                 }
+                 &.inactive {
+                     opacity: 0.5;
+                     color  : rgba(0, 0, 0, 0.35);
+                 }
+                 &.active {
+                     opacity: 0.5;
+                     color  : rgb(255, 255, 255);
+                 }
+             }
+         }
+     }
+
+     section#app-download {
+         padding-top: 7.5em;
+         background-color: $white;
+         h1 {
+             @extend %section-heading-intro;
+             font: {
+                 family: $roboto;
+                 weight: $weight-normal;
+                 size  : $font-md-medium;
+             }
+             text-transform: capitalize;
+         }
+         p {
+            font : {
+                family: $roboto;
+                weight: $weight-light;
+                size  : $font-xm-small;
+            }
+            color         : $blue-gray;
+            letter-spacing:  0.68px;
+            text-align    : center;
+         }
+         a {
+            margin-top: 4em;
+            display: block;
+            text-align: center;
+            img {
+                width: 9.5em;
+            }
          }
      }
  }
