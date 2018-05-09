@@ -629,8 +629,21 @@ main section#app-reviews div#nav-wrapper a.active {
 }
 
 main section#app-download {
+  position: relative;
   padding-top: 7.5em;
+  padding-bottom: 7.5em;
   background-color: white;
+}
+
+main section#app-download:before {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 22.3333em;
+  top: 11.25em;
+  left: 0;
+  content: '';
+  background-image: url(../img/emoji_background_detail.png);
 }
 
 main section#app-download h1 {
@@ -657,4 +670,14 @@ main section#app-download a {
 
 main section#app-download a img {
   width: 9.5em;
+}
+
+main section#app-download figure {
+  margin: unset;
+}
+
+main section#app-download figure img {
+  margin-top: 6.25em;
+  width: 100%;
+  height: auto;
 }

@@ -394,8 +394,20 @@
      }
 
      section#app-download {
-         padding-top: 7.5em;
+         position        : relative;
+         padding-top     : 7.5em;
+         padding-bottom  : 7.5em;
          background-color: $white;
+         &:before {
+             position        : absolute;
+             display         : block;
+             width           : 100%;
+             height          : 22.3333em;
+             top             : 11.25em;
+             left            : 0;
+             content         : '';
+             background-image: url(../img/emoji_background_detail.png);
+         }
          h1 {
              @extend %section-heading-intro;
              font: {
@@ -417,11 +429,19 @@
          }
          a {
             margin-top: 4em;
-            display: block;
+            display   : block;
             text-align: center;
             img {
                 width: 9.5em;
             }
+         }
+         figure {
+             margin: unset;
+             img {
+                margin-top: 6.25em;
+                width     : 100%;
+                height    : auto;
+             }
          }
      }
  }
