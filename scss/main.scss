@@ -445,3 +445,48 @@
          }
      }
  }
+
+ footer {
+     margin: 4.25em 0;
+     text-align: center;
+     a {
+         img {
+             width: 3.5em;
+         }
+     }
+     p {
+         margin-top: 1.5625em;
+         color     : $blue-gray;
+         span.logo-name {
+             font: {
+                 family: $alef;
+                 weight: $weight-bold;
+             }
+             text-transform: capitalize;
+         }
+     }
+     nav {
+         margin-bottom: 2.125em;
+         a {
+             display        : inline-block;
+             font: {
+                 family: $roboto;
+                 size  : 0.825em;
+                 weight: 600;
+             }
+             text-decoration: none;
+             text-transform : uppercase;
+             color          : $blue-gray;
+             letter-spacing : 0.5px;
+             &:hover {
+                 text-decoration: none;
+             }
+             &:first-child {
+                 margin-right: 1.56875em;
+             }
+         }
+         ul {
+             display: none;
+         }
+     }
+ }

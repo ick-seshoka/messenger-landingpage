@@ -681,3 +681,50 @@ main section#app-download figure img {
   width: 100%;
   height: auto;
 }
+
+footer {
+  margin: 4.25em 0;
+  text-align: center;
+}
+
+footer a img {
+  width: 3.5em;
+}
+
+footer p {
+  margin-top: 1.5625em;
+  color: #607d8b;
+}
+
+footer p span.logo-name {
+  font-family: "Alef", sans-serif;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+footer nav {
+  margin-bottom: 2.125em;
+}
+
+footer nav a {
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.825em;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #607d8b;
+  letter-spacing: 0.5px;
+}
+
+footer nav a:hover {
+  text-decoration: none;
+}
+
+footer nav a:first-child {
+  margin-right: 1.56875em;
+}
+
+footer nav ul {
+  display: none;
+}
