@@ -68,7 +68,7 @@ header button#menu-trigger[data-state='open'] span:after {
   }
 }
 
-main section#about-intro h2, main section#features-intro h2, main section#feature-heading h2, main section#app-reviews h2, main section#app-download h1 {
+main section#about-intro h2, main section#features-intro h2, main section#feature-heading h2, main section#app-reviews h2, main section#app-download div#download-btn-wrap h1 {
   font-family: "Roboto", sans-serif;
   font-size: 1.5em;
   font-weight: 400;
@@ -78,26 +78,26 @@ main section#about-intro h2, main section#features-intro h2, main section#featur
   line-height: 1.6;
 }
 
-main section#about-intro h2 span, main section#features-intro h2 span, main section#feature-heading h2 span, main section#app-reviews h2 span, main section#app-download h1 span {
+main section#about-intro h2 span, main section#features-intro h2 span, main section#feature-heading h2 span, main section#app-reviews h2 span, main section#app-download div#download-btn-wrap h1 span {
   font-family: "Alef", sans-serif;
   font-weight: 700;
 }
 
-main section#about-intro h2 br.br-md, main section#features-intro h2 br.br-md, main section#feature-heading h2 br.br-md, main section#app-reviews h2 br.br-md, main section#app-download h1 br.br-md {
+main section#about-intro h2 br.br-md, main section#features-intro h2 br.br-md, main section#feature-heading h2 br.br-md, main section#app-reviews h2 br.br-md, main section#app-download div#download-btn-wrap h1 br.br-md {
   display: none;
 }
 
 @media screen and (min-width: 768px) {
-  main section#about-intro h2, main section#features-intro h2, main section#feature-heading h2, main section#app-reviews h2, main section#app-download h1 {
+  main section#about-intro h2, main section#features-intro h2, main section#feature-heading h2, main section#app-reviews h2, main section#app-download div#download-btn-wrap h1 {
     font-size: 1.75em;
   }
-  main section#about-intro h2 br.br-md, main section#features-intro h2 br.br-md, main section#feature-heading h2 br.br-md, main section#app-reviews h2 br.br-md, main section#app-download h1 br.br-md {
+  main section#about-intro h2 br.br-md, main section#features-intro h2 br.br-md, main section#feature-heading h2 br.br-md, main section#app-reviews h2 br.br-md, main section#app-download div#download-btn-wrap h1 br.br-md {
     display: block;
   }
 }
 
 @media screen and (min-width: 992px) {
-  main section#about-intro h2, main section#features-intro h2, main section#feature-heading h2, main section#app-reviews h2, main section#app-download h1 {
+  main section#about-intro h2, main section#features-intro h2, main section#feature-heading h2, main section#app-reviews h2, main section#app-download div#download-btn-wrap h1 {
     font-size: 1.9375em;
   }
 }
@@ -482,6 +482,7 @@ header figure#splsh-screen-figure img {
 main section#about-intro {
   padding-top: 15em;
   padding-bottom: 8.5625em;
+  background-color: white;
   background-image: url("../img/emoji_background_detail.png");
   background-position: 0 0;
   background-repeat: repeat;
@@ -511,6 +512,19 @@ main section#app-reviews {
 main section#app-reviews h2 {
   color: rgba(236, 239, 241, 0.9);
   padding-bottom: 4.5625em;
+}
+
+main section#app-reviews div#user-reviews {
+  padding: 2em 0;
+  white-space: nowrap;
+  overflow-x: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main section#app-reviews div#user-reviews div.user-review {
+  width: 100%;
+  display: inline-block;
 }
 
 main section#app-reviews div#user-reviews div.user-review div.profile-picture {
@@ -592,7 +606,7 @@ main section#app-reviews div#user-reviews div.user-review div.user-info-wrap a s
 }
 
 main section#app-reviews div#user-reviews div.user-review div.review-wrap {
-  margin-top: 2.25em;
+  margin-top: 3.95em;
 }
 
 main section#app-reviews div#user-reviews div.user-review div.review-wrap p {
@@ -605,6 +619,20 @@ main section#app-reviews div#user-reviews div.user-review div.review-wrap p {
   color: rgba(236, 239, 241, 0.9);
 }
 
+main section#app-reviews div#user-reviews div.user-review div.review-wrap p:before {
+  position: absolute;
+  display: block;
+  content: '';
+  top: -1.25em;
+  left: -0.95em;
+  width: 5.4375em;
+  height: 4.8125em;
+  background-image: url("../img/quote_icon.svg");
+  background-size: contain;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
 main section#app-reviews div#nav-wrapper {
   text-align: right;
   margin-top: 2.625em;
@@ -612,6 +640,8 @@ main section#app-reviews div#nav-wrapper {
 
 main section#app-reviews div#nav-wrapper a {
   font-size: 1.725em;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 main section#app-reviews div#nav-wrapper a:nth-child(1) {
@@ -646,14 +676,14 @@ main section#app-download:before {
   background-image: url(../img/emoji_background_detail.png);
 }
 
-main section#app-download h1 {
+main section#app-download div#download-btn-wrap h1 {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 1.9375em;
   text-transform: capitalize;
 }
 
-main section#app-download p {
+main section#app-download div#download-btn-wrap p {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-size: 1.125em;
@@ -662,14 +692,38 @@ main section#app-download p {
   text-align: center;
 }
 
-main section#app-download a {
+main section#app-download div#download-btn-wrap a {
   margin-top: 4em;
   display: block;
   text-align: center;
 }
 
-main section#app-download a img {
+main section#app-download div#download-btn-wrap a img {
   width: 9.5em;
+}
+
+@media screen and (min-width: 768px) {
+  main section#app-download div#download-btn-wrap {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  main section#app-download div#download-btn-wrap h1, main section#app-download div#download-btn-wrap p, main section#app-download div#download-btn-wrap a {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  main section#app-download div#download-btn-wrap h1 {
+    font-size: 2.563em;
+  }
+  main section#app-download div#download-btn-wrap p {
+    font-size: 1.275em;
+  }
+  main section#app-download div#download-btn-wrap a img {
+    width: 10em;
+  }
 }
 
 main section#app-download figure {
@@ -680,6 +734,26 @@ main section#app-download figure img {
   margin-top: 6.25em;
   width: 100%;
   height: auto;
+}
+
+@media screen and (min-width: 768px) {
+  main section#app-download figure img {
+    margin-top: unset;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  main section#app-download:before {
+    height: 14.5333em;
+    top: 10.15em;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  main section#app-download:before {
+    height: 17.7333em;
+    top: 14.75em;
+  }
 }
 
 footer {
