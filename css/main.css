@@ -776,6 +776,14 @@ footer p span.logo-name {
   text-transform: capitalize;
 }
 
+@media screen and (min-width: 768px) {
+  footer p {
+    display: inline-block;
+    margin-left: 1em;
+    margin-top: unset;
+  }
+}
+
 footer nav {
   margin-bottom: 2.125em;
 }
@@ -799,6 +807,64 @@ footer nav a:first-child {
   margin-right: 1.56875em;
 }
 
+@media screen and (min-width: 768px) {
+  footer nav a {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  footer nav a {
+    display: inline-block;
+  }
+}
+
 footer nav ul {
   display: none;
+}
+
+footer nav ul li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+footer nav ul li a {
+  display: inline-block;
+  width: 1.975em;
+  height: 1.975em;
+  margin-right: 1.5em;
+  padding-top: 4px;
+  background-color: #75e5e0;
+  text-align: center;
+  border-radius: 50%;
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  footer nav ul {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  footer nav {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translateY(-30%);
+            transform: translateY(-30%);
+    margin-bottom: unset;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    margin: 2.45em 0;
+    text-align: unset;
+  }
+  footer div.row {
+    -webkit-box-pack: justify !important;
+    -ms-flex-pack: justify !important;
+        justify-content: space-between !important;
+  }
 }
