@@ -282,7 +282,7 @@
          h2 {
              @extend %section-heading-intro;
              color         : $gray;
-             padding-bottom: 4.5625em;
+             padding-bottom: 2.3625em;
          }
 
          div#user-reviews {
@@ -292,8 +292,8 @@
              box-sizing : border-box;
 
              div.user-review {
-                 width: 100%;
-                 display: inline-block;
+                 width        : 100%;
+                 display      : inline-block;
 
                  div.profile-picture {
                      position      : relative;
@@ -364,12 +364,22 @@
                             vertical-align: middle;
                          }
                      }
+                     @media screen and (min-width: 768px) {
+                         display       : block;
+                         position      : relative;
+                         margin-top    : 2em;
+                         top           : unset;
+                         transform     : none;
+                         vertical-align: unset;
+                         text-align    : unset;
+                     }
                  }
                 div.review-wrap {
                     margin-top: 3.95em;
                     p {
-                        position: relative;
-                        padding : 1.5625em;
+                        position   : relative;
+                        padding    : 1.5625em;
+                        white-space: normal;
                         font: {
                             family: $roboto;
                             size  : $font-xm-small;
@@ -382,7 +392,7 @@
                             display   : block;
                             content   : '';
                             top       : -1.25em;
-                            left      : -0.95em;
+                            left      : 0.25em;
                             width     : 5.4375em;
                             height    : 4.8125em;
                             background: {
@@ -392,6 +402,26 @@
                                 repeat  : no-repeat;
                             }
                         }
+                        br.br-md {
+                            display: none;
+                        }
+                        @media screen and (min-width: 768px) {
+                            &:before {
+                                left: -0.95em;
+                            }
+                            br.br-md {
+                                display: block;
+                            }
+                        }
+                        @media screen and (min-width: 992px) {
+                            font-size: $font-sm-small;
+                            br.br-md {
+                                display: none;
+                            }
+                        }
+                    }
+                    @media screen and (min-width: 768px) {
+                        margin-top: 2.15em;
                     }
                 }
              }
@@ -583,7 +613,7 @@
          @media screen and (min-width: 768px) {
             position     : absolute;
             top          : 50%;
-            right        : 0; 
+            right        : 0;
             transform    : translateY(-30%);
             margin-bottom: unset;
 

@@ -511,7 +511,7 @@ main section#app-reviews {
 
 main section#app-reviews h2 {
   color: rgba(236, 239, 241, 0.9);
-  padding-bottom: 4.5625em;
+  padding-bottom: 2.3625em;
 }
 
 main section#app-reviews div#user-reviews {
@@ -605,6 +605,19 @@ main section#app-reviews div#user-reviews div.user-review div.user-info-wrap a s
   vertical-align: middle;
 }
 
+@media screen and (min-width: 768px) {
+  main section#app-reviews div#user-reviews div.user-review div.user-info-wrap {
+    display: block;
+    position: relative;
+    margin-top: 2em;
+    top: unset;
+    -webkit-transform: none;
+            transform: none;
+    vertical-align: unset;
+    text-align: unset;
+  }
+}
+
 main section#app-reviews div#user-reviews div.user-review div.review-wrap {
   margin-top: 3.95em;
 }
@@ -612,6 +625,7 @@ main section#app-reviews div#user-reviews div.user-review div.review-wrap {
 main section#app-reviews div#user-reviews div.user-review div.review-wrap p {
   position: relative;
   padding: 1.5625em;
+  white-space: normal;
   font-family: "Roboto", sans-serif;
   font-size: 1.125em;
   font-weight: 300;
@@ -624,13 +638,41 @@ main section#app-reviews div#user-reviews div.user-review div.review-wrap p:befo
   display: block;
   content: '';
   top: -1.25em;
-  left: -0.95em;
+  left: 0.25em;
   width: 5.4375em;
   height: 4.8125em;
   background-image: url("../img/quote_icon.svg");
   background-size: contain;
   background-position: 0 0;
   background-repeat: no-repeat;
+}
+
+main section#app-reviews div#user-reviews div.user-review div.review-wrap p br.br-md {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  main section#app-reviews div#user-reviews div.user-review div.review-wrap p:before {
+    left: -0.95em;
+  }
+  main section#app-reviews div#user-reviews div.user-review div.review-wrap p br.br-md {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  main section#app-reviews div#user-reviews div.user-review div.review-wrap p {
+    font-size: 1.275em;
+  }
+  main section#app-reviews div#user-reviews div.user-review div.review-wrap p br.br-md {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  main section#app-reviews div#user-reviews div.user-review div.review-wrap {
+    margin-top: 2.15em;
+  }
 }
 
 main section#app-reviews div#nav-wrapper {
