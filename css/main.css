@@ -296,6 +296,10 @@ header nav a.animated.zoomOut {
     color: rgba(236, 239, 241, 0.9);
     text-transform: uppercase;
   }
+  header nav a:hover {
+    text-decoration: none;
+    color: white;
+  }
 }
 
 header nav hr {
@@ -914,6 +918,11 @@ footer nav a:first-child {
   }
 }
 
+footer nav a:hover {
+  text-decoration: none;
+  color: #607d8b;
+}
+
 footer nav ul {
   display: none;
 }
@@ -932,6 +941,10 @@ footer nav ul li a {
   background-color: #75e5e0;
   text-align: center;
   border-radius: 50%;
+  color: white;
+}
+
+footer nav ul li a:hover {
   color: white;
 }
 
