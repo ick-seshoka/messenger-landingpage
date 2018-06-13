@@ -361,12 +361,15 @@ header nav .desktop-nav-link {
   }
 }
 
+header div#hero-content {
+  text-align: center;
+}
+
 header div#hero-content h1#hero-heading {
   margin-top: 2.375em;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-size: 1.875em;
-  text-align: center;
   color: rgba(236, 239, 241, 0.9);
   line-height: 1.7;
   letter-spacing: 1.5px;
@@ -394,7 +397,6 @@ header div#hero-content span.logo-name {
 header div#hero-content p {
   color: rgba(236, 239, 241, 0.7);
   margin-top: 3em;
-  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -404,9 +406,10 @@ header div#hero-content p {
 }
 
 header div#hero-content a#app-store-badge {
+  position: relative;
   margin-top: 2em;
-  display: block;
-  text-align: center;
+  display: inline-block;
+  z-index: 1;
 }
 
 header div#hero-content a#app-store-badge img {
@@ -422,9 +425,31 @@ header div#hero-content a#app-store-badge img {
   }
 }
 
+header div#hero-content a#app-store-badge:after {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 2%;
+  content: '';
+  width: 96%;
+  height: 100%;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  z-index: -1;
+}
+
+header div#hero-content a#app-store-badge:hover:after {
+  -webkit-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
 @media screen and (min-width: 768px) {
   header div#hero-content {
     margin-top: 5.5em;
+    text-align: left;
   }
 }
 
@@ -718,6 +743,10 @@ main section#app-download:before {
   background-image: url(../img/emoji_background_detail.png);
 }
 
+main section#app-download div#download-btn-wrap {
+  text-align: center;
+}
+
 main section#app-download div#download-btn-wrap h1 {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -735,13 +764,36 @@ main section#app-download div#download-btn-wrap p {
 }
 
 main section#app-download div#download-btn-wrap a {
+  position: relative;
   margin-top: 4em;
-  display: block;
-  text-align: center;
+  display: inline-block;
+  z-index: 1;
 }
 
 main section#app-download div#download-btn-wrap a img {
   width: 9.5em;
+}
+
+main section#app-download div#download-btn-wrap a:after {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 2%;
+  content: '';
+  width: 96%;
+  height: 100%;
+  border-radius: 15px;
+  background-color: #53c2c2;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  z-index: -1;
+}
+
+main section#app-download div#download-btn-wrap a:hover:after {
+  -webkit-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
 @media screen and (min-width: 768px) {
@@ -750,8 +802,9 @@ main section#app-download div#download-btn-wrap a img {
     top: 50%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
+    text-align: left;
   }
-  main section#app-download div#download-btn-wrap h1, main section#app-download div#download-btn-wrap p, main section#app-download div#download-btn-wrap a {
+  main section#app-download div#download-btn-wrap h1, main section#app-download div#download-btn-wrap p {
     text-align: left;
   }
 }
