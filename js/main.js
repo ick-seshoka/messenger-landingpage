@@ -8,6 +8,7 @@ $(document).ready(function() {
         var menuNavItems = $('nav a');
         var menuLogo = $('#menu-logo');
         var heroContent = $('.hero-content');
+        var appStoreBadge = $('#app-store-badge');
         var animationEndEvenName = 'webkitAnimationEnd mozAnimationEnd oAnimationEnd animationend';
 
         if (menuButtonState === 'closed') {
@@ -27,6 +28,8 @@ $(document).ready(function() {
             });
             // disable body from scrolling
             $('html,body').css('overflow', 'hidden');
+            // hide app store badge ontop of navigation
+            appStoreBadge.css('z-index', '0');
 
         } else {
             $(this).attr('data-state', 'closed');
@@ -39,6 +42,8 @@ $(document).ready(function() {
             });
             // enable body scroll
             $('html,body').css('overflow', 'auto');
+            // reset z-index for app store badge
+            appStoreBadge.css('z-index', '1');
         }
     });
 
