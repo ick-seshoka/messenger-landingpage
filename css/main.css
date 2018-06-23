@@ -508,6 +508,12 @@ header figure#splsh-screen-figure img {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  header {
+    height: 48em;
+  }
+}
+
 main section#about-intro {
   padding-top: 15em;
   padding-bottom: 8.5625em;
