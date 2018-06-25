@@ -189,11 +189,11 @@ main section#features-intro div.feature-content-wrap a img, main section.feature
 }
 
 main section#features-intro div#feature-1, main section.feature div#feature-1, main section#feature-heading div#feature-1 {
-  background-image: url("../../img/lock-icon.svg");
+  background-image: url("../img/lock-icon.svg");
 }
 
 main section#features-intro div#feature-2, main section.feature div#feature-2, main section#feature-heading div#feature-2 {
-  background-image: url("../../img/group_icon.svg");
+  background-image: url("../img/group_icon.svg");
 }
 
 main section#features-intro figure, main section.feature figure, main section#feature-heading figure {
