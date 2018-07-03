@@ -121,13 +121,27 @@
 
     div#feature-1 {
         background: {
-            image: url('../../img/lock-icon.svg');
+            image: url('../img/lock-icon.svg');
+        }
+        @media screen and (min-width: 768px) {
+            background: {
+                position: 30px 100px;
+            }
+            padding-left: 90px;
+            margin-left: -90px;
         }
     }
 
     div#feature-2 {
         background: {
-            image: url('../../img/group_icon.svg');
+            image: url('../img/group_icon.svg');
+        }
+        @media screen and (min-width: 768px) {
+            background: {
+                position: 30px 100px;
+            }
+            padding-left: 90px;
+            margin-left: -90px;
         }
     }
 

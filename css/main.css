@@ -192,8 +192,24 @@ main section#features-intro div#feature-1, main section.feature div#feature-1, m
   background-image: url("../img/lock-icon.svg");
 }
 
+@media screen and (min-width: 768px) {
+  main section#features-intro div#feature-1, main section.feature div#feature-1, main section#feature-heading div#feature-1 {
+    background-position: 30px 100px;
+    padding-left: 90px;
+    margin-left: -90px;
+  }
+}
+
 main section#features-intro div#feature-2, main section.feature div#feature-2, main section#feature-heading div#feature-2 {
   background-image: url("../img/group_icon.svg");
+}
+
+@media screen and (min-width: 768px) {
+  main section#features-intro div#feature-2, main section.feature div#feature-2, main section#feature-heading div#feature-2 {
+    background-position: 30px 100px;
+    padding-left: 90px;
+    margin-left: -90px;
+  }
 }
 
 main section#features-intro figure, main section.feature figure, main section#feature-heading figure {
@@ -503,12 +519,6 @@ header figure#splsh-screen-figure img {
 }
 
 @media screen and (min-width: 992px) {
-  header {
-    height: 100%;
-  }
-}
-
-@media screen and (min-width: 1200px) {
   header {
     height: 48em;
   }
