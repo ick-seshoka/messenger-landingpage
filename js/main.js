@@ -39,11 +39,11 @@ $(document).ready(function() {
             menuNav.css({'opacity': '0', 'z-index': 0});
             heroContent.addClass('animated fadeIn').one(animationEndEvenName, function() {
                 heroContent.removeClass('animated fadeIn');
+                // reset z-index for app store badge
+                appStoreBadge.css('z-index', '1');
             });
             // enable body scroll
-            $('html,body').css('overflow', 'auto');
-            // reset z-index for app store badge
-            appStoreBadge.css('z-index', '1');
+            $('html,body').css('overflow', 'unset');
         }
     });
 
